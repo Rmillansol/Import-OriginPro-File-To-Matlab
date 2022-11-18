@@ -8,7 +8,19 @@ Ensure the code in this project is on your MATLAB path and you have Origin insta
 ```matlab
 outData=ImportOriginFileToMatlabData(filepath);
 ```
-Where OutData is the structure with all the books of the Origin file
+Where outData is the structure with all the books of the Origin file.
+For example, to access data on sheet *i* in workbook *j*. The data will be a cell array of *n* rows for *m* columns.
+```matlab
+cellarray=outData.books(i).Sheets(j).Data;
+```
+Then, you can access column properties such as name, long name, units or column type by
+```matlab
+LongName=outData.books(i).Sheets(j).Columns(k).LongName;
+```
+Remember that you can query the structure using the variable viewer provided by the Matlab IDE or by using the instruction.
+```matlab
+fieldnames(struct array)
+```
 # Important Information
 This code is licensed under the MIT License.
 
