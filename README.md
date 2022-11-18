@@ -5,7 +5,10 @@ Note that it only retrieves the information of the books and it does not retriev
 
 # Getting Started
 Ensure the code in this project is on your MATLAB path and you have Origin installed. Note only works on Windows. It has been tested with OriginPro 2020 and 2022.
-
+```matlab
+outData=ImportOriginFileToMatlabData(filepath);
+```
+Where OutData is the structure with all the books of the Origin file
 # Important Information
 This code is licensed under the MIT License.
 
